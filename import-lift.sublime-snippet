@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+import net.liftweb._
+import common._
+import http._
+import util._
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>impl</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.scala</scope>
+</snippet>
