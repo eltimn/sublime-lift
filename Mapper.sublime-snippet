@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[
+import net.liftweb.mapper._
+
+class ${1:record-name} extends LongKeyedMapper[$1] {
+  def getSingleton = $1
+
+  def primaryKeyField = id
+  object id extends MappedLongIndex(this)
+  ${0}
+}
+
+object $1 extends $1 with LongKeyedMetaMapper[$1]
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>mapper</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.scala</scope>
+</snippet>
