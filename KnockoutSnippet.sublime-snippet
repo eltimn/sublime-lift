@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[
+import net.liftweb._
+import http.js._
+import http.js.JE._
+import http.js.JsCmds._
+import http.json._
+import util.Helpers._
+
+object ${1:MySnippet} {
+  def render = {
+    ${0}
+
+    def save(jv: JValue): JsCmd = {
+      val name = tryo((jv \ "name").extract[String]) openOr ""
+      Call("window.${2:koForm}.afterSave", name)
+    }
+
+    val saveFunc: JsExp = AnonFunc(SHtml.jsonCall(Call("window.$2.formJson"), save _))
+
+    val onLoad =
+      SetExp(
+        JsVar("window.$2"),
+        CallNew("${3:app.views.MyView}", saveFunc)
+      ) &
+      Call("ko.applyBindings", JsVar("window.$2"), Call("document.getElementById", "${4:my-div}"))
+
+    "#id_onload" #> Script(OnLoad(onLoad))
+  }
+}
+
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>kosnip</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.scala</scope>
+</snippet>

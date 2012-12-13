@@ -1,5 +1,13 @@
 <snippet>
   <content><![CDATA[
+import org.bson.types.ObjectId
+
+import net.liftweb._
+import common._
+import mongodb.record._
+import mongodb.record.field._
+import record.field._
+
 class ${1:record-name} private () extends MongoRecord[$1] with ObjectIdPk[$1] {
   def meta = $1
 

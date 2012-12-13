@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[
+(function(window, $) {
+  window.${1:app.views.MyView} = function(saveFunc) {
+    var self = this;
+
+    self.name = ko.observable("");
+
+    self.formJson = function() {
+      return ko.toJSON({"name": self.name()});
+    };
+
+    self.save = function() {
+      console.log("save called. name: "+self.name());
+      // call the save function passed in
+      saveFunc();
+    };
+
+    self.afterSave = function(name) {
+      console.log("afterSave called. name: "+name);
+    };
+
+    ${0}
+  };
+})(this, jQuery);
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>koview</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>
