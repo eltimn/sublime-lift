@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+<div data-lift="surround?with=${1:default};at=${2:content}">
+  ${0}
+</div>
+]]></content>
+  <tabTrigger>surround</tabTrigger>
+  <scope>text.html</scope>
+  <description>HTML - lift surround</description>
+</snippet>
