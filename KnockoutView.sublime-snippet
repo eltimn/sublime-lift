@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
-(function(window, $) {
-  window.${1:appviewsMyView} = function(saveFunc) {
+(function(window, \$) {
+  window.${1:app.views.MyView} = function(saveFunc) {
     var self = this;
 
     self.name = ko.observable("");
@@ -24,8 +24,7 @@
   };
 })(this, jQuery);
 ]]></content>
-  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>koview</tabTrigger>
-  <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.js</scope>
+  <description>JavaScript - knockout view model</description>
 </snippet>
