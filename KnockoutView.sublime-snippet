@@ -7,7 +7,7 @@
     self.name = ko.observable("");
 
     self.formJson = function() {
-      return ko.toJSON({"name": self.name()});
+      return {"name": self.name()};
     };
 
     self.save = function() {

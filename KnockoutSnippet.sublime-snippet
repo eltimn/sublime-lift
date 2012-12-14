@@ -1,13 +1,19 @@
 <snippet>
   <content><![CDATA[
+import scala.xml._
+
 import net.liftweb._
+import common._
+import http._
 import http.js._
 import http.js.JE._
 import http.js.JsCmds._
-import http.json._
+import json._
 import util.Helpers._
 
 object ${1:MySnippet} {
+  implicit val formats = DefaultFormats
+
   def render = {
     ${0}
 
