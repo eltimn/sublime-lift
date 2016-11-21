@@ -2,14 +2,13 @@
   <content><![CDATA[
 import scala.xml._
 
-import net.liftweb._
-import common._
-import http._
-import http.js._
-import http.js.JE._
-import http.js.JsCmds._
-import json._
-import util.Helpers._
+import net.liftweb.common._
+import net.liftweb.http._
+import net.liftweb.http.js._
+import net.liftweb.http.js.JE._
+import net.liftweb.http.js.JsCmds._
+import net.liftweb.json._
+import net.liftweb.util.Helpers._
 
 object ${1:MySnippet} {
   implicit val formats = DefaultFormats

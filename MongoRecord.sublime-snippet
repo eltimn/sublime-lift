@@ -1,10 +1,9 @@
 <snippet>
   <content><![CDATA[
-import net.liftweb._
-import common._
-import mongodb.record._
-import mongodb.record.field._
-import record.field._
+import net.liftweb.common._
+import net.liftweb.mongodb.record._
+import net.liftweb.mongodb.record.field._
+import net.liftweb.record.field._
 
 class ${1:record-name} private () extends MongoRecord[$1] with ObjectIdPk[$1] {
   def meta = $1
@@ -13,7 +12,7 @@ class ${1:record-name} private () extends MongoRecord[$1] with ObjectIdPk[$1] {
 }
 
 object $1 extends $1 with MongoMetaRecord[$1] {
-  import mongodb.BsonDSL._
+  import net.liftweb.mongodb.BsonDSL._
 
   override def collectionName = "${2:collection-name}"
 }

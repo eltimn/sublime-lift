@@ -1,8 +1,7 @@
 <snippet>
   <content><![CDATA[
-import net.liftweb._
-import common._
-import mapper._
+import net.liftweb.common._
+import net.liftweb.mapper._
 
 class ${1:record-name} extends LongKeyedMapper[$1] {
   def getSingleton = $1
